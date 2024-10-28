@@ -1,0 +1,18 @@
+<h1>Buyour product</h1>
+<div class="container">
+  @if(loadinf){
+    <h5>loading...</h5>
+  }
+
+  @if(!loadinf){
+    <div class="card" style="width: 18rem;">
+      <img src="{{product?.image}}" class="card-img-top" alt="{{product?.title}}">
+      <div class="card-body">
+        <h4>{{product?.price | currency }}</h4>
+        <h5 class="card-title">{{product?.title}}</h5>
+        <p class="card-text">{{product?.description}}</p>
+      </div>
+    </div>
+  }
+
+</div>
